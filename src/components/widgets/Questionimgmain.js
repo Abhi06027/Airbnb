@@ -16,7 +16,7 @@ export default function Questionimgmain() {
           </div>
         </div>
 
-        <div className="lg:px-32  lg:flex   ">
+        <div className="lg:px-32  lg:flex    ">
           <Questionimg Questionimg="./images/Question.jpg" />
         </div>
       </div>
