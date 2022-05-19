@@ -5,7 +5,7 @@ import Distdata from "./Distdata";
 export default function DestinationList(props) {
   return (
     <div>
-      <div className="text-black px-5  md:px-10 lg:px-32  mt-[330px] lg:mt-96 space-x-2 text-2xl md:text-3xl font-semibold">
+      <div className="text-black px-5  md:px-10 lg:px-32 mt-[330px] space-x-2 text-2xl md:text-3xl font-semibold">
         <Textfield>{"Inspiration for your next trip"}</Textfield>
         {/* <p> Inspiration for your next trip  </p> */}
       </div>

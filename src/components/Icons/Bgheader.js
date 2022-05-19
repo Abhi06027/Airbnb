@@ -6,7 +6,7 @@ import ButtonRaised from "../widgets/ButtonRaised";
 function Bgheader() {
   return (
     <div
-      className=" w-full   h-[550px] lg:h-[800px] bg-cover bg-center rounded-lg  lg:rounded-2xl"
+      className=" w-full h-[550px] lg:h-[800px] bg-cover bg-center rounded-lg  lg:rounded-2xl"
       style={{ backgroundImage: `url(${airbnbbg})` }}
     >
       <div className="pt-[350px] lg:pt-[600px] text-center text-3xl lg:text-4xl px-6 text-white font-semibold">

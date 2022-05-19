@@ -1,11 +1,9 @@
 import React from "react";
 
-export default function ButtonLogin({ type = "button", children }) {
+export default function ButtonLogin(props) {
   return (
     <div>
-      <button className="bg-white cursor-pointer py-2 px-2 rounded-full">
-        {children}
-      </button>
+      <button className={props.Buttonstyle}>{props.children}</button>
     </div>
   );
 }
