@@ -87,42 +87,32 @@ function Airbnbdatepicker(props) {
   });
 
   return (
-    <div ref={menuRef} className="bg-white w-[760px]  h-16  rounded-full">
+    <div ref={menuRef} className="bg-white w-[700px]  h-16  rounded-full">
       <div className="px-7 absolute  py-2 font-semibold text-sm ml-[220px] z-10 ">
-        Check in{" "}
+        Date{" "}
       </div>
-      <div className=" bg-white w-44 h-16 rounded-full  absolute ml-[220px] px-7 hover:bg-[#e2e2e2] flex items-center pt-5">
+      <div className=" bg-white w-56 h-16 rounded-full  absolute ml-[220px] px-7 hover:bg-[#e2e2e2] flex items-center pt-5">
         <DatePicker
           selected={selectDate}
           onChange={(date) => setSelectedDate(date)}
         />
       </div>
 
-      <div className="px-7 absolute py-2  font-semibold   text-sm ml-[390px]  z-10 ">
-        Check out{" "}
-      </div>
-      <div className=" bg-white hover:bg-[#e2e2e2] w-56 h-16 rounded-full absolute ml-[390px]  px-7 flex items-center pt-5">
-        <DatePicker
-          selected={selectDate}
-          onChange={(date) => setSelectedDate(date)}
-        />
-      </div>
-
-      <div className="px-7 absolute py-2 font-semibold text-sm ml-[520px] z-10 ">
+      <div className="px-7 absolute py-2 font-semibold text-sm ml-[450px] z-10 ">
         Who{" "}
       </div>
       <div
         onClick={() => setShowGuestList(!showGuestList)}
-        className="px-7 absolute text-gray-400 font-normal mt-7 text-sm ml-[520px] z-10 "
+        className="px-7 absolute text-gray-400 font-normal mt-7 text-sm ml-[450px] z-10 "
       >
         Add guests{" "}
       </div>
-      <div className="flex absolut  "> </div>
+      <div className="flex absolute  "> </div>
 
-      <div className="  hover:bg-[#e2e2e2] bg-white w-44 h-16 rounded-full absolute ml-[520px] px-5 flex items-center ">
+      <div className="  hover:bg-[#e2e2e2] bg-white w-48 h-16 rounded-full absolute ml-[450px] flex items-center px-8 ">
         <div className="bg-[#e41d57] z-10 text-center flex justify-center  space-x-2  ml-24 px-4 py-4  rounded-full  cursor-pointer  text-white ">
-          <Search></Search>
-          <div className="md:hidden lg:flex ">
+          <Search />
+          <div className=" lg:flex ">
             <ButtonRaised>{"Search"}</ButtonRaised>
           </div>
         </div>
