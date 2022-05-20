@@ -7,12 +7,23 @@ import Globesvg from "../Icons/Globesvg";
 import Search from "../Icons/Search";
 import Buttonloginmenu from "../widgets/Buttonloginmenu";
 import Airbnbdatepicker from "../widgets/Airbnbdatepicker";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 function Appbar(props) {
   const [showButtonLoginMenu, setShowButtonLoginMenu] = useState(false);
+
+  let menuRef = useRef();
+
+  useEffect(() => {
+    document.addEventListener("mousedown", (event) => {
+      if (!menuRef.current.contains(event.target)) {
+        setShowButtonLoginMenu(false);
+      }
+    });
+  });
+
   return (
     <>
-      <div className="py-5 px-5 ">
+      <div ref={menuRef} className="py-5 px-5 ">
         <div className="md:hidden bg-white w-full rounded-full h-12 justify-center flex items-center">
           <div className="lg:hidden absolute flex items-center space-x-1  text-pink-600">
             <Search />
@@ -57,7 +68,7 @@ function Appbar(props) {
             </div>
           </div>
         </div>
-        <div>{showButtonLoginMenu ? <Buttonloginmenu /> : null}</div>
+        <div>{showButtonLoginMenu ? <Buttonloginmenu /> : null} </div>
 
         <div className="lg:flex md:flex justify-center cursor-pointer my-2 md:px-10 hidden">
           <Airbnbdatepicker />

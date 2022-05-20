@@ -65,7 +65,7 @@
 
 // export default Airbnbdatepicker;
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import "./Datepicker.css";
 import ButtonRaised from "./ButtonRaised";
@@ -76,8 +76,18 @@ function Airbnbdatepicker(props) {
   const [selectDate, setSelectedDate] = useState(null);
   const [showGuestList, setShowGuestList] = useState(false);
 
+  let menuRef = useRef();
+
+  useEffect(() => {
+    document.addEventListener("mousedown", (event) => {
+      if (!menuRef.current.contains(event.target)) {
+        setShowGuestList(false);
+      }
+    });
+  });
+
   return (
-    <div className="bg-white w-[760px]  h-16  rounded-full">
+    <div ref={menuRef} className="bg-white w-[760px]  h-16  rounded-full">
       <div className="px-7 absolute  py-2 font-semibold text-sm ml-[220px] z-10 ">
         Check in{" "}
       </div>
